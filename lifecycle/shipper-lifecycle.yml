@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://logistics-docs.shipper.id/docs/overview
+docs: https://logistics-docs.shipper.id/
+versioning:
+  scheme: uri-path
+  current: v3
+  detail: v3.0.2
+  docs: https://logistics-docs.shipper.id/docs/overview
+  notes: >-
+    The developer hub documents "API v3" (v3.0.2). Endpoints are versioned in
+    the URI path on the merchant-api host.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No formal deprecation / sunset policy or RFC 8594 Sunset/Deprecation header
+    support is published. Individual documentation pages carry ad-hoc
+    "Updated by <date>" revision notes (e.g. Domestic Pricing updated 21 Aug
+    2024, Create Order updated 21 Aug 2024) rather than a versioned deprecation
+    schedule.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_notes: >-
+  No public status page was found for shipper.id (the Indonesian logistics
+  company). The shipper.statuspage.io subdomain belongs to an unrelated
+  Russian-language "Shipper" service and is deliberately NOT claimed here.
+deprecated_operations: []

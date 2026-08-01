@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://logistics-docs.shipper.id/docs/integration-flow
+docs: https://logistics-docs.shipper.id/docs/sign-up-for-shipper-api-integration
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    Single API-key authentication. The key is passed in the X-API-Key HTTP
+    request header on every call. Keys are environment-scoped (separate sandbox
+    and production keys). There is no OAuth / OpenID Connect surface, so no
+    scopes artifact applies.
+schemes:
+- name: X-API-Key
+  type: apiKey
+  in: header
+  parameter_name: X-API-Key
+  description: >-
+    API key issued per merchant account, sent in the X-API-Key request header.
+    Sandbox keys are obtained by registering a sandbox account at
+    https://bos.sandbox.shipper.id and contacting Shipper (cs@shipper.id);
+    production keys are provisioned by the Shipper team.
+  sources: [docs]
+environments:
+- name: sandbox
+  base_url: https://merchant-api-sandbox.shipper.id
+  dashboard: https://bos.sandbox.shipper.id
+- name: production
+  base_url: https://merchant-api.shipper.id
+key_provisioning:
+  steps:
+  - Register for a Sandbox account at https://bos.sandbox.shipper.id and verify it.
+  - Contact the Shipper team (cs@shipper.id) to be granted API-key access.
+  - Set the webhook URL in the dashboard (Menu API > Set Webhook) to receive status callbacks.

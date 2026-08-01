@@ -1,0 +1,50 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://logistics-docs.shipper.id/llms.txt
+note: >-
+  No official hosted/remote MCP server was found for Shipper. This is a
+  candidate tool surface derived from the operations documented in the Shipper
+  Logistics API v3 developer hub — a starting point for a future MCP server, not
+  a provider claim. All tools authenticate with the X-API-Key header.
+server:
+  name: shipper
+  transport: http
+  url: null
+base_urls:
+  sandbox: https://merchant-api-sandbox.shipper.id
+  production: https://merchant-api.shipper.id
+tools:
+- name: search_location_by_keyword
+  description: Search a location/area by keyword to obtain its area id.
+  source: https://logistics-docs.shipper.id/docs/search-location-by-keyword
+- name: search_location_complete
+  description: Resolve an area id by drilling from country to specific administrative area level.
+  source: https://logistics-docs.shipper.id/docs/search-location-complete-step
+- name: get_domestic_pricing
+  description: Retrieve domestic multi-courier shipping prices for an origin/destination and parcel.
+  source: https://logistics-docs.shipper.id/docs/domestic-pricing-1
+- name: get_vehicle_id
+  description: Get the Lalamove vehicle id (Lalamove orders only).
+  source: https://logistics-docs.shipper.id/docs/get-vehicle-id
+- name: create_order
+  description: Create a shipment order.
+  source: https://logistics-docs.shipper.id/docs/create-order-1
+- name: create_order_cod
+  description: Create a cash-on-delivery shipment order.
+  source: https://logistics-docs.shipper.id/docs/create-order-cod
+- name: get_order_details_by_id
+  description: Retrieve order details by Shipper order id.
+  source: https://logistics-docs.shipper.id/docs/get-order-details
+- name: get_order_details_by_external_id
+  description: Retrieve order details by the merchant-supplied external id.
+  source: https://logistics-docs.shipper.id/docs/get-order-detail-by-external-id
+- name: get_shipping_label
+  description: Get the shipping label and receipt for an order (mandatory before pickup).
+  source: https://logistics-docs.shipper.id/docs/get-shipping-label
+- name: create_pickup_order
+  description: Create a pickup request to activate an order.
+  source: https://logistics-docs.shipper.id/docs/create-pickup-order
+- name: cancel_order
+  description: Cancel an order.
+  source: https://logistics-docs.shipper.id/docs/cancelled-order

@@ -1,0 +1,27 @@
+# Shipper Documentation
+
+> Welcome to the Shipper developer hub. You'll find comprehensive guides and documentation to help you start working with Shipper as quickly as possible, as well as support if you get stuck. Let's jump right in!
+
+## Guides
+- [Overview](https://logistics-docs.shipper.id/docs/overview.md)
+- [Authentication](https://logistics-docs.shipper.id/docs/sign-up-for-shipper-api-integration.md)
+- [Integration Flow](https://logistics-docs.shipper.id/docs/integration-flow.md)
+- [Base URL](https://logistics-docs.shipper.id/docs/base-url.md)
+- [Order Cancellation](https://logistics-docs.shipper.id/docs/cancelled-order.md): Updated by 30th of May 2024
+- [Dashboard Access](https://logistics-docs.shipper.id/docs/dashboard-access.md)
+- [Shipper 3PLs Partners](https://logistics-docs.shipper.id/docs/list-of-3pl.md)
+- [Insurance Policy](https://logistics-docs.shipper.id/docs/insurance-calculation-rules.md)
+- [Origin Coverage Area](https://logistics-docs.shipper.id/docs/shipper-origin-coverage-area.md)
+- [Lalamove Order Flow](https://logistics-docs.shipper.id/docs/lalamove-order.md)
+- [Create Order](https://logistics-docs.shipper.id/docs/create-order.md)
+- [Search Location by Keyword](https://logistics-docs.shipper.id/docs/search-location-by-keyword.md)
+- [Search Location Complete Step](https://logistics-docs.shipper.id/docs/search-location-complete-step.md): In this section, you'll be guided to obtain the area id of a specific location starting from country administration level to the specific area administration level.
+- [Domestic Pricing](https://logistics-docs.shipper.id/docs/domestic-pricing-1.md): Update by 21 Aug 2024
+- [Get Vehicle ID for Lalamove](https://logistics-docs.shipper.id/docs/get-vehicle-id.md): This documentation can be used for Lalamove orders only. Last Update 14 Aug 2024
+- [Create Order](https://logistics-docs.shipper.id/docs/create-order-1.md): Updated by 21 Aug 2024
+- [Get Order Details by Order Id](https://logistics-docs.shipper.id/docs/get-order-details.md): Updated by 13 Jun 2024
+- [Get Order Details by External Id](https://logistics-docs.shipper.id/docs/get-order-detail-by-external-id.md): Updated by 13 Jun 2024
+- [Create Order COD](https://logistics-docs.shipper.id/docs/create-order-cod.md): Updated 13 Jun 2024
+- [[NEW] Get Shipping Label and Receipt (Mandatory)](https://logistics-docs.shipper.id/docs/get-shipping-label.md): last updated by 20 Mar 2024
+- [Create Request Pickup (Order Activation)](https://logistics-docs.shipper.id/docs/create-pickup-order.md)
+- [Shipper Status](https://logistics-docs.shipper.id/docs/shipper-external-status.md)

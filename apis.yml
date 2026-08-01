@@ -1,8 +1,30 @@
 aid: shipper
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/shipper.png
 name: Shipper
-description: Shipper is a company surfaced as a portfolio company of lightspeed-venture-partners, partech,
-  prosus-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a
-  lead awaiting the enrichment pipeline.
+description: >-
+  Shipper is an Indonesian technology-driven logistics aggregator that connects
+  merchants and e-commerce sellers to hundreds of third-party courier and
+  last-mile delivery partners through a single platform. Its services span a
+  logistics aggregator (multi-courier rate check, order creation, pickup and
+  tracking), nationwide fulfillment and warehousing, contract logistics,
+  international freight forwarding, and e-commerce enablement. Developers
+  integrate via the HTTP-based Shipper Logistics API (v3), which exposes
+  location search, domestic pricing, order creation (including COD), shipping
+  label and receipt generation, pickup request, and shipment status tracking,
+  with real-time delivery-status webhooks. Backed by Lightspeed Venture
+  Partners, Partech, and Prosus Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/shipper/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,10 +36,51 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Logistics
+- Shipping
+- Fulfillment
+- Supply Chain
+- E-commerce
+- Last Mile Delivery
+- Courier
+- Indonesia
+apis:
+- name: Shipper Logistics API
+  description: >-
+    HTTP-based API (v3) for interacting with Shipper's location, pricing, and
+    shipment features — search location by keyword and administrative area,
+    retrieve domestic multi-courier pricing, create orders (including COD),
+    generate shipping labels and receipts, request pickups, retrieve order
+    details, and track shipment status. Authenticated with an API key passed in
+    the X-API-Key header. Sandbox and production environments are available.
+  humanURL: https://logistics-docs.shipper.id/
+  baseURL: https://merchant-api.shipper.id
+  tags:
+  - Logistics
+  - Shipping
+  - Tracking
+  - Pricing
+  - Fulfillment
+  properties:
+  - type: Documentation
+    url: https://logistics-docs.shipper.id/docs/overview
+  - type: Authentication
+    url: authentication/shipper-authentication.yml
+  - type: Sandbox
+    url: sandbox/shipper-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/shipper-webhooks.yml
+  - type: Conventions
+    url: conventions/shipper-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/shipper-lifecycle.yml
+  - type: MCPServer
+    url: mcp/shipper-mcp.yml
+  - type: LLMsTxt
+    url: llms/shipper-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +89,42 @@ maintainers:
 common:
 - type: Website
   url: https://shipper.id/
+- type: DeveloperPortal
+  url: https://logistics-docs.shipper.id/
+- type: Documentation
+  url: https://logistics-docs.shipper.id/docs/overview
+- type: APIReference
+  url: https://logistics-docs.shipper.id/
+- type: GettingStarted
+  url: https://logistics-docs.shipper.id/docs/overview
+- type: Authentication
+  url: authentication/shipper-authentication.yml
+- type: Sandbox
+  url: sandbox/shipper-sandbox.yml
+- type: Webhooks
+  url: asyncapi/shipper-webhooks.yml
+- type: Conventions
+  url: conventions/shipper-conventions.yml
+- type: Lifecycle
+  url: lifecycle/shipper-lifecycle.yml
+- type: MCPServer
+  url: mcp/shipper-mcp.yml
+- type: LLMsTxt
+  url: llms/shipper-llms.txt
+- type: WellKnown
+  url: well-known/shipper-well-known.yml
+- type: DomainSecurity
+  url: security/shipper-domain-security.yml
+- type: Conformance
+  url: conformance/shipper-conformance.yml
+- type: SignUp
+  url: https://bos.sandbox.shipper.id
+- type: Support
+  url: http://faq.shipper.id/
+- type: Blog
+  url: https://shipper.id/en/blog/
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

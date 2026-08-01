@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of /.well-known/* on Shipper hosts
+note: >-
+  No /.well-known discovery documents are published. The API hosts return 403
+  for all probed paths and the marketing host returns 404. An llms.txt IS
+  published on the docs host (see llms/shipper-llms.txt) and indexes the docs
+  pages and endpoints.
+hosts:
+- host: https://merchant-api.shipper.id
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+  - {path: /.well-known/oauth-authorization-server, status: 403}
+  - {path: /.well-known/api-catalog, status: 403}
+  - {path: /.well-known/ai-plugin.json, status: 403}
+- host: https://merchant-api-sandbox.shipper.id
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+  - {path: /.well-known/oauth-authorization-server, status: 403}
+  - {path: /.well-known/api-catalog, status: 403}
+  - {path: /.well-known/ai-plugin.json, status: 403}
+- host: https://shipper.id
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://logistics-docs.shipper.id
+  documents:
+  - {path: /llms.txt, status: 200, file: ../llms/shipper-llms.txt}

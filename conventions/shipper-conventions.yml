@@ -1,0 +1,56 @@
+generated: '2026-07-21'
+method: searched
+source: https://logistics-docs.shipper.id/docs/overview
+docs:
+- https://logistics-docs.shipper.id/docs/integration-flow
+- https://logistics-docs.shipper.id/docs/base-url
+- https://logistics-docs.shipper.id/docs/webhook
+summary: >-
+  Cross-cutting request/response semantics for the Shipper Logistics API (v3),
+  derived from the developer documentation. HTTP/JSON REST API, API-key auth,
+  push-based webhook status callbacks.
+authentication:
+  style: api-key
+  header: X-API-Key
+  reference: authentication/shipper-authentication.yml
+transport:
+  protocol: https
+  content_type: application/json
+  api_version: v3 (v3.0.2)
+  base_urls:
+    sandbox: https://merchant-api-sandbox.shipper.id
+    production: https://merchant-api.shipper.id
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or documented idempotent-retry contract is
+    published. External IDs (external_id supplied by the merchant on order
+    creation) can be used to look up orders (Get Order Details by External Id)
+    but are not documented as an idempotency mechanism.
+pagination:
+  documented: false
+  notes: Location search returns keyword/area result lists; no cursor/offset pagination contract is documented.
+versioning:
+  scheme: uri-path
+  current: v3
+  notes: >-
+    Documentation is labelled "API v3 Documentation" (v3.0.2). Individual
+    endpoint pages carry per-page "Updated by <date>" notes rather than a formal
+    dated changelog.
+  reference: lifecycle/shipper-lifecycle.yml
+webhooks:
+  supported: true
+  direction: server-to-client (push)
+  format: JSON POST to a merchant-provided endpoint
+  configuration: Dashboard > Menu API > Set Webhook
+  status_field: external_status
+  reference: asyncapi/shipper-webhooks.yml
+errors:
+  documented_envelope: false
+  notes: >-
+    A dedicated API error-response schema is not published in the developer
+    docs. Shipment lifecycle state is expressed as numeric shipper status codes
+    (e.g. 999 Cancelled, 1370 Gagal Kirim, 2000 Paket Terkirim) surfaced as
+    shipper_status in responses and external_status in webhook callbacks.
+rate_limiting:
+  documented: false

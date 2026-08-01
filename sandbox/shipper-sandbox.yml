@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://logistics-docs.shipper.id/docs/base-url
+docs:
+- https://logistics-docs.shipper.id/docs/sign-up-for-shipper-api-integration
+- https://logistics-docs.shipper.id/docs/base-url
+summary: >-
+  Shipper provides a fully separated sandbox environment with its own API host,
+  dashboard, and API key. Developers register a sandbox account, obtain a
+  sandbox API key from the Shipper team, and exercise the full location /
+  pricing / order / label / pickup / tracking flow before switching the base
+  URL and key to production.
+environments:
+- name: sandbox
+  base_url: https://merchant-api-sandbox.shipper.id
+  dashboard: https://bos.sandbox.shipper.id
+  key: separate sandbox X-API-Key issued after sandbox registration
+- name: production
+  base_url: https://merchant-api.shipper.id
+  dashboard: production dashboard (Menu API > Set Webhook)
+  key: separate production X-API-Key
+test_data:
+  notes: >-
+    Shipper does not publish fixed magic test identifiers or test card numbers;
+    the sandbox operates against the same API contract as production using a
+    sandbox key. Test the delivery-status lifecycle end to end by creating a
+    sandbox order and observing external_status codes via webhook.
+webhook_testing:
+  set_webhook: Dashboard > Menu API > Set Webhook (input endpoint URL, type JSON)
+  requirement: A stateless, publicly reachable HTTPS endpoint that accepts JSON POSTs.

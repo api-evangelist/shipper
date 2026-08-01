@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: derived
+source: https://logistics-docs.shipper.id/docs/overview
+note: >-
+  Cross-cutting standards posture derived from the Shipper Logistics API v3
+  developer documentation. No published third-party compliance certifications
+  (SOC 2 / ISO 27001 / PCI / etc.) were found, so no Compliance pointer is
+  emitted.
+standards:
+- id: rest-json-http
+  conforms: true
+  evidence: HTTP-based JSON API over HTTPS (v3)
+- id: api-key-auth
+  conforms: true
+  evidence: X-API-Key header authentication documented
+- id: webhooks
+  conforms: true
+  evidence: JSON POST delivery-status callbacks configurable in dashboard
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 flows documented
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no application/problem+json error envelope documented
+- id: asyncapi
+  conforms: false
+  evidence: webhooks documented but no AsyncAPI specification published
+- id: rfc8594-sunset-header
+  conforms: false
