@@ -2,11 +2,9 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: https://logistics-docs.shipper.id/llms.txt
-note: >-
-  No official hosted/remote MCP server was found for Shipper. This is a
-  candidate tool surface derived from the operations documented in the Shipper
-  Logistics API v3 developer hub — a starting point for a future MCP server, not
-  a provider claim. All tools authenticate with the X-API-Key header.
+note: No official hosted/remote MCP server was found for Shipper. This is a candidate tool surface derived
+  from the operations documented in the Shipper Logistics API v3 developer hub — a starting point for
+  a future MCP server, not a provider claim. All tools authenticate with the X-API-Key header.
 server:
   name: shipper
   transport: http
@@ -48,3 +46,9 @@ tools:
 - name: cancel_order
   description: Cancel an order.
   source: https://logistics-docs.shipper.id/docs/cancelled-order
+deployment:
+  mode: none
+  verified: derived
+  tools: 11
+  checked: '2026-08-12'
+  source: catalog MCP census
